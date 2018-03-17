@@ -10,7 +10,7 @@ package xyz.dlin.rpc.simple.service;
  */
 public class RemoteServiceImpl implements RemoteService{
     @Override
-    public void sayHello(Object name) {
+    public void sayHello(String name) {
         System.out.println("Hello " + name.toString() +" , remote service method is being called" );
     }
 }

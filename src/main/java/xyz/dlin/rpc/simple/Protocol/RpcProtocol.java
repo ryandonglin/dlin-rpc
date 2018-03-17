@@ -1,11 +1,9 @@
 package xyz.dlin.rpc.simple.Protocol;
 
-import java.util.List;
-
 /**
- * ${DESCRIPTION}
+ * RPC基本通讯协议
  *
- * @author dongl50@ziroom.com
+ * @author donglin
  * @version 1.0.0
  * @date 2018/3/16
  * @since 1.0.0
@@ -16,14 +14,17 @@ public class RpcProtocol {
 
     private String methodName;
 
-    private List<Object> args;
+    private Class<?>[] parameterTypes;
+
+    private Object[] args;
 
     public RpcProtocol() {
     }
 
-    public RpcProtocol(String className, String methodName, List<Object> args) {
+    public RpcProtocol(String className, String methodName, Class<?>[] parameterTypes, Object[] args) {
         this.className = className;
         this.methodName = methodName;
+        this.parameterTypes = parameterTypes;
         this.args = args;
     }
 
@@ -43,11 +44,19 @@ public class RpcProtocol {
         this.methodName = methodName;
     }
 
-    public List<Object> getArgs() {
+    public Class<?>[] getParameterTypes() {
+        return parameterTypes;
+    }
+
+    public void setParameterTypes(Class<?>[] parameterTypes) {
+        this.parameterTypes = parameterTypes;
+    }
+
+    public Object[] getArgs() {
         return args;
     }
 
-    public void setArgs(List<Object> args) {
+    public void setArgs(Object[] args) {
         this.args = args;
     }
 }

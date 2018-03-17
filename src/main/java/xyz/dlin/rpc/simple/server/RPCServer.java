@@ -47,7 +47,7 @@ public class RPCServer {
 
                 if (methodExists) {
                     Method method;
-                    method = obj.getMethod(protocol.getMethodName(), parameterTypes);
+                    method = obj.getMethod(protocol.getMethodName(), protocol.getParameterTypes());
                     method.invoke(obj.newInstance(), protocol.getArgs());
                 } else {
 

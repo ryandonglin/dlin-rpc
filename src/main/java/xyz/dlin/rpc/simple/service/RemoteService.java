@@ -10,5 +10,5 @@ package xyz.dlin.rpc.simple.service;
  */
 public interface RemoteService {
 
-    void sayHello(Object name);
+    void sayHello(String name);
 }
