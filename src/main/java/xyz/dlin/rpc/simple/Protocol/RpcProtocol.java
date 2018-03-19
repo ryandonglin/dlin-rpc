@@ -1,5 +1,7 @@
 package xyz.dlin.rpc.simple.Protocol;
 
+import java.io.Serializable;
+
 /**
  * RPC基本通讯协议
  *
@@ -8,7 +10,9 @@ package xyz.dlin.rpc.simple.Protocol;
  * @date 2018/3/16
  * @since 1.0.0
  */
-public class RpcProtocol {
+public class RpcProtocol implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String className;
 

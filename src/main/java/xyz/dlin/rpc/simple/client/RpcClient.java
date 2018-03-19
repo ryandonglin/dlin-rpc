@@ -2,18 +2,16 @@ package xyz.dlin.rpc.simple.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import xyz.dlin.rpc.simple.Protocol.RpcProtocol;
-import xyz.dlin.rpc.simple.service.RemoteService;
 
 import java.io.IOException;
 import java.io.PrintStream;
+import java.lang.reflect.Proxy;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * ${DESCRIPTION}
  *
- * @author dongl50@ziroom.com
+ * @author donglin
  * @version 1.0.0
  * @date 2018/3/16
  * @since 1.0.0
