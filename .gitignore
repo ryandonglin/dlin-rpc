@@ -21,3 +21,4 @@ dependency-reduced-pom.xml
 /bin
 git
 git.pub
+*.idea
